@@ -14,3 +14,6 @@ dependencies = [
 
 [project.scripts]
 otto-tts = "otto_tts.cli:otto_tts"
+
+[project.urls]
+repository = "https://github.com/lvlh2/otto-tts"
