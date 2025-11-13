@@ -1,6 +1,6 @@
 [project]
 name = "otto-tts"
-version = "0.1.1"
+version = "0.1.2"
 description = "A command line tool for otto's text-to-speech service from shuodedao.li"
 readme = "README.md"
 requires-python = ">=3.13"

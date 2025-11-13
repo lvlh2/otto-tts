@@ -37,12 +37,12 @@ def otto_tts(output_dir: str, format: str, texts: tuple[str]) -> None:
         Path(output_dir).mkdir(exist_ok=True)
 
     for i, text in enumerate(texts):
+        click.echo(f'Converting "{text}" to audio...')
         pinyin_list = get_pinyin_list(text)
 
         with httpx.Client() as client:
             result = to_audio(client, pinyin_list)
 
-        click.echo(f'Converting "{text}" to audio...')
         result.export(Path(output_dir) / f"{i:>04}.{format}")
         time.sleep(2)
 
